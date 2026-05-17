@@ -1,10 +1,10 @@
-// ── NAV scroll effect ───────────────────────────────
+// ── NAV scroll effect ────────────────────────────────
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 40);
 });
 
-// ── Speed lines generator ───────────────────────────
+// ── Speed lines ──────────────────────────────────────
 const speedContainer = document.getElementById('speed-lines');
 function makeSpeedLine() {
   const line = document.createElement('div');
@@ -12,48 +12,36 @@ function makeSpeedLine() {
   line.style.left = Math.random() * 100 + 'vw';
   line.style.animationDuration = (1.2 + Math.random() * 1.5) + 's';
   line.style.animationDelay = (Math.random() * 2) + 's';
-  line.style.opacity = (0.2 + Math.random() * 0.5).toString();
+  line.style.opacity = (0.15 + Math.random() * 0.4).toString();
   speedContainer.appendChild(line);
   line.addEventListener('animationend', () => line.remove());
 }
-setInterval(makeSpeedLine, 180);
+setInterval(makeSpeedLine, 200);
 
-// ── Intersection Observer for animations ────────────
-const io = new IntersectionObserver((entries) => {
+// ── Skill bars animate on scroll ────────────────────
+const skillObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
-
-    // stat counters
-    entry.target.querySelectorAll('.stat-value[data-target]').forEach(el => {
-      const target = +el.dataset.target;
-      const duration = 1400;
-      const step = 16;
-      const increment = target / (duration / step);
-      let current = 0;
-      const timer = setInterval(() => {
-        current = Math.min(current + increment, target);
-        el.textContent = Math.floor(current).toLocaleString();
-        if (current >= target) clearInterval(timer);
-      }, step);
-    });
-
-    // stat bars
-    entry.target.querySelectorAll('.stat-fill').forEach(el => {
-      setTimeout(() => el.classList.add('animated'), 200);
-    });
-
-    // skill bars
     entry.target.querySelectorAll('.skill-fill').forEach(el => {
       setTimeout(() => el.classList.add('animated'), 200);
     });
-
-    io.unobserve(entry.target);
+    skillObserver.unobserve(entry.target);
   });
-}, { threshold: 0.25 });
+}, { threshold: 0.2 });
+const skillsSection = document.getElementById('skills');
+if (skillsSection) skillObserver.observe(skillsSection);
 
-document.querySelectorAll('#stats, #skills').forEach(el => io.observe(el));
+// ── Timeline items animate on scroll ────────────────
+const tlObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (!entry.isIntersecting) return;
+    setTimeout(() => entry.target.classList.add('visible'), i * 150);
+    tlObserver.unobserve(entry.target);
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.timeline-item').forEach(el => tlObserver.observe(el));
 
-// ── Fade-in on scroll ───────────────────────────────
+// ── Generic fade-in on scroll ────────────────────────
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -65,10 +53,10 @@ const fadeObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll(
-  '.project-card, .about-card, .stat-card, .skill-row'
+  '.project-card, .about-card, .skill-row, .edu-card'
 ).forEach(el => {
   el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
+  el.style.transform = 'translateY(20px)';
   el.style.transition = 'opacity .5s ease, transform .5s ease';
   fadeObserver.observe(el);
 });
@@ -94,37 +82,27 @@ document.getElementById('hamburger').addEventListener('click', () => {
   const isOpen = links.style.display === 'flex';
   links.style.display = isOpen ? '' : 'flex';
   if (!isOpen) {
-    links.style.flexDirection = 'column';
-    links.style.position = 'absolute';
-    links.style.top = '64px';
-    links.style.left = '0';
-    links.style.right = '0';
-    links.style.background = 'rgba(8,8,8,.97)';
-    links.style.padding = '1rem 2rem';
-    links.style.gap = '1rem';
-    links.style.borderBottom = '1px solid rgba(255,255,255,.08)';
+    Object.assign(links.style, {
+      flexDirection: 'column', position: 'absolute',
+      top: '64px', left: '0', right: '0',
+      background: 'rgba(8,8,8,.97)', padding: '1rem 2rem',
+      gap: '1rem', borderBottom: '1px solid rgba(255,255,255,.08)'
+    });
   }
 });
-
-// close mobile nav on link click
 document.querySelectorAll('.nav-links a').forEach(a => {
   a.addEventListener('click', () => {
-    const links = document.querySelector('.nav-links');
-    links.style.display = '';
+    document.querySelector('.nav-links').style.display = '';
   });
 });
 
-// ── Helmet tilt on mouse move ───────────────────────
+// ── Helmet 3D tilt on mouse ─────────────────────────
 const helmet = document.getElementById('helmet-img');
 if (helmet) {
   document.addEventListener('mousemove', e => {
-    const cx = window.innerWidth / 2;
-    const cy = window.innerHeight / 2;
-    const dx = (e.clientX - cx) / cx;
-    const dy = (e.clientY - cy) / cy;
+    const dx = (e.clientX - window.innerWidth  / 2) / (window.innerWidth  / 2);
+    const dy = (e.clientY - window.innerHeight / 2) / (window.innerHeight / 2);
     helmet.style.transform = `rotateY(${dx * 8}deg) rotateX(${-dy * 5}deg)`;
   });
-  document.addEventListener('mouseleave', () => {
-    helmet.style.transform = '';
-  });
+  document.addEventListener('mouseleave', () => { helmet.style.transform = ''; });
 }
