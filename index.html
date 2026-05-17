@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zihan Liu · Portfolio</title>
+  <meta name="description" content="Zihan Liu — Researcher & Engineer. Full-throttle portfolio in Formula 1 style."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ═══════════════════ NAV ═══════════════════ -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="logo-number">01</span>
+        <span class="logo-name">ZIHAN LIU</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about"   id="nav-about">ABOUT</a></li>
+        <li><a href="#stats"   id="nav-stats">STATS</a></li>
+        <li><a href="#projects" id="nav-projects">PROJECTS</a></li>
+        <li><a href="#skills"  id="nav-skills">SKILLS</a></li>
+        <li><a href="#contact" id="nav-contact">CONTACT</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section id="hero">
+    <!-- animated grid lines -->
+    <div class="grid-overlay"></div>
+
+    <!-- speed lines -->
+    <div class="speed-lines" id="speed-lines"></div>
+
+    <!-- ticker bar -->
+    <div class="ticker-wrap">
+      <div class="ticker">
+        <span>MACHINE LEARNING &nbsp;·&nbsp;</span>
+        <span>MULTI-AGENT RL &nbsp;·&nbsp;</span>
+        <span>GAME THEORY &nbsp;·&nbsp;</span>
+        <span>PORTFOLIO STRATEGIES &nbsp;·&nbsp;</span>
+        <span>DEEP LEARNING &nbsp;·&nbsp;</span>
+        <span>RESEARCH &amp; ENGINEERING &nbsp;·&nbsp;</span>
+        <span>MACHINE LEARNING &nbsp;·&nbsp;</span>
+        <span>MULTI-AGENT RL &nbsp;·&nbsp;</span>
+        <span>GAME THEORY &nbsp;·&nbsp;</span>
+        <span>PORTFOLIO STRATEGIES &nbsp;·&nbsp;</span>
+        <span>DEEP LEARNING &nbsp;·&nbsp;</span>
+        <span>RESEARCH &amp; ENGINEERING &nbsp;·&nbsp;</span>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-eyebrow">
+          <div class="flag-anim">
+            <div class="flag-stripe red"></div>
+            <div class="flag-stripe white"></div>
+            <div class="flag-stripe red"></div>
+          </div>
+          <span>DRIVER PROFILE</span>
+        </div>
+
+        <h1 class="hero-name">
+          <span class="first">ZIHAN</span>
+          <span class="last">LIU</span>
+        </h1>
+
+        <div class="hero-number">#01</div>
+
+        <p class="hero-tagline">
+          Pushing the limits of <em>AI research</em><br/>at full racing speed.
+        </p>
+
+        <div class="hero-meta">
+          <div class="meta-item">
+            <span class="meta-label">TEAM</span>
+            <span class="meta-value">Research &amp; Engineering</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">BASE</span>
+            <span class="meta-value">Global</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">SEASON</span>
+            <span class="meta-value">2026</span>
+          </div>
+        </div>
+
+        <div class="hero-ctas">
+          <a href="#projects" class="btn-primary" id="hero-projects-btn">VIEW PROJECTS</a>
+          <a href="#contact"  class="btn-ghost"   id="hero-contact-btn">GET IN TOUCH</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="helmet-wrapper">
+          <div class="helmet-glow"></div>
+          <img src="helmet.png" alt="F1 Racing Helmet" class="helmet-img" id="helmet-img"/>
+          <div class="helmet-badge">POLE POSITION</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ ABOUT ═══════════════════ -->
+  <section id="about">
+    <div class="section-header">
+      <div class="section-number">01</div>
+      <h2 class="section-title">DRIVER<br/><strong>PROFILE</strong></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="lead-text">
+          I'm a researcher and engineer with a passion for <strong>multi-agent reinforcement learning</strong>,
+          <strong>game theory</strong>, and building intelligent systems that operate at the edge of what's possible.
+        </p>
+        <p>
+          From designing backtesting frameworks for portfolio strategies to training AI agents that learn to
+          cooperate and compete in complex environments — I thrive where math meets code.
+        </p>
+        <p>
+          When I'm not pushing algorithms to their limits, I'm studying how emergent behaviour arises in
+          multi-agent systems, and why some strategies dominate even the best opponents.
+        </p>
+      </div>
+
+      <div class="about-cards">
+        <div class="about-card" id="card-experience">
+          <div class="card-icon">🏎️</div>
+          <div class="card-label">EXPERIENCE</div>
+          <div class="card-value">Research &amp; Engineering</div>
+        </div>
+        <div class="about-card" id="card-focus">
+          <div class="card-icon">🔬</div>
+          <div class="card-label">FOCUS</div>
+          <div class="card-value">Multi-Agent RL &amp; Game Theory</div>
+        </div>
+        <div class="about-card" id="card-language">
+          <div class="card-icon">💻</div>
+          <div class="card-label">LANGUAGE</div>
+          <div class="card-value">Python · C++ · JavaScript</div>
+        </div>
+        <div class="about-card" id="card-mode">
+          <div class="card-icon">⚡</div>
+          <div class="card-label">MODE</div>
+          <div class="card-value">Always Full Throttle</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ STATS ═══════════════════ -->
+  <section id="stats">
+    <div class="stats-bg-text">STATS</div>
+    <div class="stats-inner">
+      <div class="section-header centered">
+        <div class="section-number">02</div>
+        <h2 class="section-title">SEASON<br/><strong>STATS</strong></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card" id="stat-projects">
+          <div class="stat-value" data-target="12">0</div>
+          <div class="stat-label">PROJECTS SHIPPED</div>
+          <div class="stat-bar"><div class="stat-fill" style="--pct:80%"></div></div>
+        </div>
+        <div class="stat-card" id="stat-papers">
+          <div class="stat-value" data-target="5">0</div>
+          <div class="stat-label">PAPERS &amp; REPORTS</div>
+          <div class="stat-bar"><div class="stat-fill" style="--pct:50%"></div></div>
+        </div>
+        <div class="stat-card" id="stat-algorithms">
+          <div class="stat-value" data-target="8">0</div>
+          <div class="stat-label">ALGORITHMS IMPLEMENTED</div>
+          <div class="stat-bar"><div class="stat-fill" style="--pct:65%"></div></div>
+        </div>
+        <div class="stat-card" id="stat-commits">
+          <div class="stat-value" data-target="1200">0</div>
+          <div class="stat-label">GIT COMMITS</div>
+          <div class="stat-bar"><div class="stat-fill" style="--pct:90%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ PROJECTS ═══════════════════ -->
+  <section id="projects">
+    <div class="section-header">
+      <div class="section-number">03</div>
+      <h2 class="section-title">RACE<br/><strong>RESULTS</strong></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="projects-grid">
+
+      <article class="project-card" id="proj-marl">
+        <div class="proj-position">P1</div>
+        <div class="proj-tag">MULTI-AGENT RL</div>
+        <h3 class="proj-title">Exploitability Analysis of MARL Algorithms</h3>
+        <p class="proj-desc">
+          Comparative exploitability analysis of IPPO, IDDPG, VDN and IQL on PettingZoo environments.
+          Computed ABR exploitability curves across 3M training frames.
+        </p>
+        <div class="proj-tech">
+          <span>Python</span><span>PyTorch</span><span>BenchMARL</span><span>PettingZoo</span>
+        </div>
+        <div class="proj-result">
+          <span class="result-label">OUTCOME</span>
+          <span class="result-value">Full convergence analysis + Nash equilibrium plots</span>
+        </div>
+      </article>
+
+      <article class="project-card featured" id="proj-portfolio">
+        <div class="proj-position">P2</div>
+        <div class="proj-tag">QUANTITATIVE FINANCE</div>
+        <h3 class="proj-title">Portfolio Strategy Backtesting Framework</h3>
+        <p class="proj-desc">
+          Built and evaluated 8 portfolio strategies for precious metals asset allocation including
+          Cross-Sectional Momentum, Risk Parity, Minimum Variance, and Term Spread.
+        </p>
+        <div class="proj-tech">
+          <span>Python</span><span>NumPy</span><span>Pandas</span><span>Matplotlib</span>
+        </div>
+        <div class="proj-result">
+          <span class="result-label">OUTCOME</span>
+          <span class="result-value">Comprehensive Sharpe-ratio &amp; drawdown analysis</span>
+        </div>
+      </article>
+
+      <article class="project-card" id="proj-cfr">
+        <div class="proj-position">P3</div>
+        <div class="proj-tag">GAME THEORY</div>
+        <h3 class="proj-title">CFR &amp; PSRO Visualization Framework</h3>
+        <p class="proj-desc">
+          Implemented and visualized CFR, PSRO and ABR algorithms on RPS and Simple Adversary
+          environments. Generated Nash equilibrium strategy distributions and exploitability curves.
+        </p>
+        <div class="proj-tech">
+          <span>Python</span><span>BenchMARL</span><span>Matplotlib</span>
+        </div>
+        <div class="proj-result">
+          <span class="result-label">OUTCOME</span>
+          <span class="result-value">Visual convergence analysis to Nash equilibrium</span>
+        </div>
+      </article>
+
+      <article class="project-card" id="proj-fitness">
+        <div class="proj-position">P4</div>
+        <div class="proj-tag">MOBILE / AI</div>
+        <h3 class="proj-title">AI-Powered Fitness Voice Assistant</h3>
+        <p class="proj-desc">
+          Android app integrating LLMs as a real-time voice coach during workouts. Running mode
+          monitors speed and time with a minimalist, tech-inspired UI.
+        </p>
+        <div class="proj-tech">
+          <span>Android</span><span>OpenAI API</span><span>Kotlin</span>
+        </div>
+        <div class="proj-result">
+          <span class="result-label">OUTCOME</span>
+          <span class="result-value">Real-time LLM voice coaching app</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════ SKILLS ═══════════════════ -->
+  <section id="skills">
+    <div class="section-header">
+      <div class="section-number">04</div>
+      <h2 class="section-title">TECHNICAL<br/><strong>SETUP</strong></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="skills-layout">
+      <div class="skills-col">
+        <h3 class="skills-group-title">CORE LANGUAGES</h3>
+        <div class="skill-row" id="skill-python">
+          <span class="skill-name">Python</span>
+          <div class="skill-track"><div class="skill-fill" style="--w:95%"></div></div>
+          <span class="skill-pct">95%</span>
+        </div>
+        <div class="skill-row" id="skill-cpp">
+          <span class="skill-name">C++</span>
+          <div class="skill-track"><div class="skill-fill" style="--w:70%"></div></div>
+          <span class="skill-pct">70%</span>
+        </div>
+        <div class="skill-row" id="skill-js">
+          <span class="skill-name">JavaScript</span>
+          <div class="skill-track"><div class="skill-fill" style="--w:75%"></div></div>
+          <span class="skill-pct">75%</span>
+        </div>
+      </div>
+
+      <div class="skills-col">
+        <h3 class="skills-group-title">ML / AI STACK</h3>
+        <div class="skill-row" id="skill-pytorch">
+          <span class="skill-name">PyTorch</span>
+          <div class="skill-track"><div class="skill-fill" style="--w:90%"></div></div>
+          <span class="skill-pct">90%</span>
+        </div>
+        <div class="skill-row" id="skill-rl">
+          <span class="skill-name">Reinforcement Learning</span>
+          <div class="skill-track"><div class="skill-fill" style="--w:85%"></div></div>
+          <span class="skill-pct">85%</span>
+        </div>
+        <div class="skill-row" id="skill-game">
+          <span class="skill-name">Game Theory</span>
+          <div class="skill-track"><div class="skill-fill" style="--w:80%"></div></div>
+          <span class="skill-pct">80%</span>
+        </div>
+      </div>
+
+      <div class="skills-col">
+        <h3 class="skills-group-title">TOOLS &amp; PLATFORMS</h3>
+        <div class="skill-row" id="skill-git">
+          <span class="skill-name">Git &amp; GitHub</span>
+          <div class="skill-track"><div class="skill-fill" style="--w:90%"></div></div>
+          <span class="skill-pct">90%</span>
+        </div>
+        <div class="skill-row" id="skill-linux">
+          <span class="skill-name">Linux / macOS</span>
+          <div class="skill-track"><div class="skill-fill" style="--w:85%"></div></div>
+          <span class="skill-pct">85%</span>
+        </div>
+        <div class="skill-row" id="skill-quant">
+          <span class="skill-name">Quantitative Finance</span>
+          <div class="skill-track"><div class="skill-fill" style="--w:75%"></div></div>
+          <span class="skill-pct">75%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CONTACT ═══════════════════ -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="section-header centered">
+        <div class="section-number">05</div>
+        <h2 class="section-title">PIT<br/><strong>STOP</strong></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <p class="contact-sub">Ready to collaborate? Let's race together.</p>
+
+      <form class="contact-form" id="contact-form">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="cf-name">YOUR NAME</label>
+            <input type="text" id="cf-name" name="name" placeholder="Max Verstappen" required/>
+          </div>
+          <div class="form-field">
+            <label for="cf-email">EMAIL ADDRESS</label>
+            <input type="email" id="cf-email" name="email" placeholder="max@redbull.com" required/>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="cf-message">YOUR MESSAGE</label>
+          <textarea id="cf-message" name="message" rows="5" placeholder="Tell me about your project..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" id="form-submit">SEND MESSAGE ›</button>
+      </form>
+
+      <div class="contact-links">
+        <a href="https://github.com/zihanltesla" target="_blank" rel="noopener" id="link-github" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="mailto:zihan@example.com" id="link-email" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email
+        </a>
+        <a href="https://linkedin.com/in/zihanliu" target="_blank" rel="noopener" id="link-linkedin" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">ZIHAN LIU</div>
+      <div class="footer-copy">© 2026 · Built at full throttle</div>
+      <div class="footer-flag">
+        <div class="checker"></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
